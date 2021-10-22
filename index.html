@@ -11,12 +11,18 @@
 <body>
     <div class="gameContainer">
         <div id="scoreCont" >Score: 0</div>
-        <div class="gameOver">GAME - OVER
-            <button class="btn" onclick="window.location.reload();">Play Again</button>
+        <div class="gameOver">Welcome to THE RUN
+            <button class="btn" onclick=""> Enable sound </button>
         </div>
         <div class="mc"></div>
-        
-        <div class="obstacle obstacleAni"></div>
+        <div class="obstacle obstacleAni">
+
+        </div>
+        <div class="right gamepad "> <button onclick="moveleft();" class="leftarr ilb bn">&larr;</button>
+            
+            <button onclick="jumpup();" class="jump blc bn">&uarr;</button><button onclick="moveright();" class="rightarr ilb bn">&rarr;</button>
+           
+        </div>
     </div>
 </body>
 </html>
