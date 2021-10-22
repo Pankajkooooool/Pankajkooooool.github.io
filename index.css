@@ -15,7 +15,7 @@ body{
     background-size: 100vw 100vh;
     width:100vw;
     height: 100vh;
-   
+  
    
 }
 .gameOver{
@@ -80,66 +80,67 @@ padding: 10px;
     transform: scaleX(-1);
 }
 .obstacleAni{
-    animation: obstacleAni 5s linear infinite;
+    animation: obstacleAni 4.5s linear infinite;
 }
 
 .animateMc{
-    animation: mc 0.6s linear;
+    animation: mc 0.8s linear;
 }
 .bn{
-    padding: 4px;
-    background-color: blue;
+    padding: 6px;
+    background-color: rgb(27, 122, 231);
+    opacity: 0.5;
     border: 1px solid black;
     border-radius: 9px;
     outline: none;
     color: white;
 }
 .gamepad{
-    position: relative;
-    
+    position: absolute;
+    bottom:30px;
     display: flex;
-    float: right;
+    float: left;
     padding: 20px;
-    background-color: balck;
 
 }
-.leftarr{
-    align-self: flex-end;
-    outline: none;
+/* .leftarr{
+   
+    
 }
 .rightarr{
-align-self: flex-start;
-}
+
+} */
 .jump{
 position: relative;
-bottom: 30px;
-padding: 6px;
+bottom: 40px;
+padding: 9px;
 }
-@media (max-width: 900px) {
-    
-    .mc{
-bottom:30px;
-width :100px;
+.gameoverI{
+    background: url(static.png);
+    background-repeat: no-repeat;
+    background-size: contain;
     height: 100px;
+    width: 100px;
 
-    }.obstacle{
-        bottom:30px;
-        width :105px;
-    height: 100px;
-    }
+    position:absolute;
+    bottom:70px;
+    left:50vw;
 }
 @keyframes mc{
 
     0%{
-        botton:50px;
+        bottom:50px;
+        
+
     }
     50%{
         bottom:342px;
-        left: 10;
     }
    
     100%{
         bottom:50px;
+        
+
     }
 }
 @keyframes obstacleAni {
@@ -152,3 +153,40 @@ width :100px;
     }
     
 }
+    @media (min-width:900px) {
+        .gamepad{
+            visibility: hidden;
+        }
+    }
+    @media (max-width: 900px) {
+        
+        .mc{
+    bottom:30px;
+    width :100px;
+        height: 100px;
+    
+        }
+        .obstacle{
+            bottom:30px;
+            width :70px;
+        height: 70px;
+        }
+        .gameoverI{
+            bottom:30px;
+            width :70px;
+        height: 70px;
+        }
+        body{
+            background-size: contain;
+        }
+        .gameOver{
+            text-align: center;
+            padding: 10px;
+            color: white;
+            
+            font-size: 20px;
+            display: flex;
+            flex-direction: column;
+           
+        }
+    }

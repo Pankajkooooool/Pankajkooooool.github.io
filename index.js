@@ -12,8 +12,11 @@ document.onkeydown = function (e) {
     mc.classList.add("animateMc");
     setTimeout(() => {
       mc.classList.remove("animateMc");
+      dx = parseInt(window.getComputedStyle(mc, null).getPropertyValue("left"));
+      mc.style.left = dx + 50 + "px";
+
     }, 500);
-    jump.play();
+     jump.play();
   }
   if (e.keyCode == 39) {
     mc = document.querySelector(".mc");
@@ -51,6 +54,8 @@ function moveleft() {
 }
 
 setInterval(() => {
+
+  if(isgameOver==false){
   mc = document.querySelector(".mc");
 
   gameOver = document.querySelector(".gameOver");
@@ -67,12 +72,17 @@ setInterval(() => {
 
   offsetX = Math.abs(dx - ox);
   offsetY = Math.abs(dy - oy);
+  
 
   // console.log(offsetX,offsetY)
-  if (offsetX < 102 && offsetY < 89 && isgameOver == false) {
+  if (offsetX < 75 && offsetY < 89 && isgameOver == false) {
     gameOver.innerHTML = `GAME OVER<button class="btn" onclick="window.location.reload();">Play Again</button>`;
     obstacle.classList.remove("obstacleAni");
+    obstacle.classList.remove("obstacle");
+    obstacle.classList.add("gameoverI");
 
+    // document.querySelector('.gameContainer').style.visibility='hidden';
+    
     isgameOver = true;
     setTimeout(() => {
       death.play();
@@ -94,6 +104,7 @@ setInterval(() => {
       );
       if (aniDur < 2.3) {
       } else if (aniDur < 3.0) {
+        
       } else {
         newDur = aniDur - 0.1;
         obstacle.style.animationDuration = newDur + "s";
@@ -101,6 +112,7 @@ setInterval(() => {
       }
     }, 500);
   }
+}
 }, 10);
 function updatescore(score) {
   scorebox = document.getElementById("scoreCont");

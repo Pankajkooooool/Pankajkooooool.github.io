@@ -1,28 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Adventure-Island</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css" />
     <script defer src="index.js"></script>
-</head>
-<body>
-    <div class="gameContainer">
-        <div id="scoreCont" >Score: 0</div>
-        <div class="gameOver">Welcome to THE RUN
-            <button class="btn" onclick=""> Enable sound </button>
-        </div>
-        <div class="mc"></div>
-        <div class="obstacle obstacleAni">
+  </head>
 
-        </div>
-        <div class="right gamepad "> <button onclick="moveleft();" class="leftarr ilb bn">&larr;</button>
-            
-            <button onclick="jumpup();" class="jump blc bn">&uarr;</button><button onclick="moveright();" class="rightarr ilb bn">&rarr;</button>
-           
-        </div>
+  <body>
+    <div class="gameContainer">
+      <div id="scoreCont">Score: 0</div>
+      <div class="gameOver">
+      
+      </div>
+      <div class="mc"></div>
+      <div class="obstacle obstacleAni"></div>
+      <div class=" gamepad">
+        <button onclick="moveleft();" class="leftarr ilb bn">&larr; L</button>
+
+        <button onclick="jumpup();" class="jump bn">&uarr;U</button
+        >
+        <button onclick="moveright();" class="rightarr ilb bn">R&rarr;</button>
+      </div>
     </div>
-</body>
+  </body>
 </html>
